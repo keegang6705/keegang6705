@@ -1,8 +1,8 @@
 ### hmm🤨
 what are you looking for???  
-top repo  
+## TOP REPO    
 1 [BemisEditor](https://github.com/keegang6705/BemisEditor) chrome extension  
-2 [BemisAutoTyper3](https://github.com/keegang6705/BemisAutoTyper3) old version of BemisEditor based on .NETcore3.1(actually it just autotyper)
+2 [BemisAutoTyper3](https://github.com/keegang6705/BemisAutoTyper3) old version of BemisEditor based on .NETcore3.1(actually it just autotyper)  
 
 | look! i'm so epic | what i use |
 | :---: | :---: |
