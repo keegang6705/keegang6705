@@ -1,6 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keegang Markdown Viewer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    #content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
+  <h1>Markdown Viewer</h1>
+  <div id="content">Loading...</div>
+
+  <!-- Load Marked library -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadMarkdown() {
+      const url = "https://raw.githubusercontent.com/keegang6705/keegang6705/refs/heads/main/README.md";
+      try {
+        const response = await fetch(url);
+        const markdown = await response.text();
+        const html = marked.parse(markdown);
+        document.getElementById("content").innerHTML = html;
+      } catch (error) {
+        document.getElementById("content").innerHTML = "<p style='color: red;'>Error loading markdown file.</p>";
+        console.error("Error fetching markdown:", error);
+      }
+    }
+
+    loadMarkdown();
+  </script>
 </body>
 </html>
